@@ -22,21 +22,21 @@
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/8ce1743c-23fa-45d4-9492-cb5912fa3af6)
 
-# if username and password is correct then you will able to read the full Blog other it shows Invalid Username and Password 
+# if username and password is correct then the USer will able to read the full Blog otherwise it shows error message (Invalid Username and Password) 
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/222ab9cb-bb6c-4ca4-8de6-9a4971935f65)
 
-# We should have to click on the SignUp button and then login to read the full Blog 
+# User should have to click on the SignUp button and then login to read the full Blog 
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/004cfc4c-75b8-4e0a-9058-0844bee0b112)
 
-# If the username and email is already thaken by another persong then it shows a error message 
+# If the username and email is already thaken by another User then it shows a error message 
 
-# Email 
+# Email (email already exists)
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/745d2ecd-4aaa-42b1-b2ac-8770b6168388)
 
-# Username 
+# Username (username already taken)
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/7c685527-d799-4fd1-9812-73ed3d2b4d50)
 
@@ -53,11 +53,11 @@
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/a5c4c520-a899-4a1c-a9b0-716730d56a63)
 
-# Now the user can redirect to another page, and a pop-up message shown on the screen 'Login-Successfully'
+# Now the user can redirect to another page, and a pop-up message shown on the web page 'Login-Successfully'
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/ca7b9355-25bd-4746-9ceb-51e20c362103)
 
-# Now, the user will able to read the blog by clicking on the 'Continue Reading link' 
+# Now, the user will able to read the blog by clicking on 'Continue Reading' 
 
 ![image](https://github.com/prateeksingh4435/blog/assets/128826031/b785fa77-bf9a-46fc-ac03-92255c6e8d31)
 
