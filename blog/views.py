@@ -1,5 +1,5 @@
 from django.shortcuts import HttpResponse,render,redirect
-from Blogging.models import Blog,signupdata
+from Blogging.models import Blog,signupdata,WriteBlockchainBlog,WriteTechnologyBlog,WriteRoboticsBlog,WriteWebBlog
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
@@ -29,8 +29,9 @@ def contact(request):
 
 def technology(request):
     if request.user.is_authenticated:
+        blog = WriteTechnologyBlog.objects.all()
 
-        return render(request,'tech.html')
+        return render(request,'tech.html',{'blog':blog})
     else:
         messages.error(request,'Login to read latest blog ')
         return redirect('blog')
@@ -38,21 +39,27 @@ def technology(request):
 
 def designing(request):
     if request.user.is_authenticated:
-        return render(request,'web.html')
+        blog = WriteWebBlog.objects.all()
+        
+        return render(request,'web.html',{'blog':blog})
     else:
         messages.error(request, 'Login to read latest blog ')
 
         return redirect('blog')
 def blockchain(request):
     if request.user.is_authenticated:
-        return render(request,'block.html ')
+        blog = WriteBlockchainBlog.objects.all()
+        
+        return render(request,'block.html',{'blog':blog})
     else:
         messages.error(request, 'Login to read latest blog ')
         return redirect('blog')
 
 def robotics(request):
     if request.user.is_authenticated:
-        return render(request,'robo.html')
+        blog = WriteRoboticsBlog.objects.all()
+        
+        return render(request,'robo.html',{'blog':blog})
     else:
         messages.error(request, 'Login to read latest blog ')
         return redirect('blog')
@@ -97,6 +104,7 @@ def loginpage(request):
             login(request,user)
             messages.success(request,'Login-successfully')
             return redirect('authenticationpage')
+
         else:
             messages.error(request,'Invalid username and password')
 

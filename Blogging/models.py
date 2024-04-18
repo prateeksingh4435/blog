@@ -19,3 +19,43 @@ class signupdata(models.Model):
     password2 = models.CharField(max_length=50)
 
 
+class WriteTechnologyBlog(models.Model):
+    name = models.CharField(max_length = 60) 
+    email = models.CharField(max_length = 60)
+    topic = models.CharField(max_length = 150)
+    write = models.TextField(max_length = 8000)
+    date = models.DateField()
+    
+    def __str__(self):
+        return self.topic
+
+class WriteRoboticsBlog(models.Model):
+    name = models.CharField(max_length = 60) 
+    email = models.CharField(max_length = 60)
+    topic = models.CharField(max_length = 150)
+    write = models.TextField(max_length = 8000)
+    date = models.DateField()
+    
+    def __str__(self):
+        return self.topic
+    
+
+class WriteWebBlog(models.Model):
+    name = models.CharField(max_length = 60) 
+    email = models.CharField(max_length = 60)
+    topic = models.CharField(max_length = 150)
+    write = models.TextField(max_length = 8000)
+    date = models.DateField()
+    
+    def __str__(self):
+        return self.topic    
+
+class WriteBlockchainBlog(models.Model):
+    name = models.CharField(max_length = 60) 
+    email = models.CharField(max_length = 60)
+    topic = models.CharField(max_length = 150)
+    write = models.TextField(max_length = 8000)
+    date = models.DateField()
+    
+    def __str__(self):
+        return self.topic

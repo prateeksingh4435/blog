@@ -6,19 +6,14 @@ h1 { text-align:center;}
 {% block body %}
 {%load static%}
 <br><br>
-
+{% for i in blog%}
+{% if i.name == 'Krishna' %}
 <div class="container ">
     <h1><b>Top 5 Web Design Blogs That You Must Read In 2023</b></h1><br><br>
   <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>Web Designer Depot:</b><span class="text-body-secondary">(WDD)</span></h2>
-        <p class="lead">Web Designer Depot, often referred to as WDD, has been a prominent figure in the world of web design since its establishment in 2010 by Walter Apai, a seasoned web designer himself. Over the years, WDD has evolved into a comprehensive platform, serving as an invaluable resource for web designers, developers, and creatives worldwide.<br>
-
-At the heart of WDD is its role as a wellspring of inspiration. The platform boasts a curated collection of exceptional web designs, user interfaces, and digital experiences. It acts as a constant source of fresh ideas and trends for designers seeking creative inspiration to infuse into their projects.<br>
-Beyond inspiration, WDD offers an extensive library of tutorials and guides, covering a wide array of topics, from CSS and JavaScript techniques to responsive design and user experience optimization. Whether you're a novice or an expert, the platform provides valuable resources to enhance your skills and knowledge.WDD also keeps its audience informed with the latest developments in the field of web design. In a rapidly changing industry, staying up-to-date is crucial, and WDD accomplishes this by regularly publishing news articles on web design and development trends, tools, and emerging technologies.<br>
-Moreover, Web Designer Depot is not just a repository of knowledge but a thriving community. The platform encourages engagement through comments and discussions on articles, facilitating knowledge sharing and collaboration among readers, authors, and fellow designers.<br>
-In a testament to its commitment to best practices, WDD's own website employs responsive design, ensuring accessibility across various devices, from desktops to mobile phones. This dedication to inclusivity aligns with the platform's mission to promote accessible web experiences.<br>
-In summary, Web Designer Depot has solidified its place as an essential resource for web designers and developers. It offers a blend of inspiration, education, community engagement, and accessibility, making it an indispensable hub in the ever-evolving world of web design. Whether you're seeking inspiration, knowledge, or a sense of belonging within the design community, Web Designer Depot has you covered.<br>
+        <h2 class="featurette-heading fw-normal lh-1"><b>{{i.topic}}:</b><span class="text-body-secondary">(WDD)</span></h2>
+        <p class="lead"> {{i.write|safe}}
             </p></div>
       <div class="col-md-5 ">
           <img src="{% static '\image\wdd1.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1300">
@@ -26,14 +21,11 @@ In summary, Web Designer Depot has solidified its place as an essential resource
       </div>
     </div>
    <br><hr><br>
+   {% elif i.name == 'Suresh' %}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>Web UX Collective: </b><span class="text-body-secondary">The Art of User Experience</span></h2>
-        <p class="lead">In the digital age, where user experience reigns supreme, Web UX Collective has emerged as an indispensable online platform. Born from the collaborative efforts of passionate UX professionals and enthusiasts, it stands as a beacon of knowledge, inspiration, and community in the realm of User Experience (UX) design.<br>
-At its core, Web UX Collective is a collaborative hub, a place where UX professionals from various corners of the world converge to share their insights, experiences, and expertise. It serves as a melting pot of diverse perspectives, creating a rich tapestry of UX wisdom that enriches the collective understanding of this ever-evolving field.<br>
-One of the hallmarks of Web UX Collective is its vast and diverse content. It acts as a treasure trove of insights that covers a wide spectrum of UX-related topics. Whether you're a seasoned UX designer looking to delve deeper into advanced concepts or a newcomer seeking foundational principles, this platform offers something of value for everyone. From design thinking and information architecture to usability testing and interaction design, the platform serves as a comprehensive resource for UX professionals at all levels.<br>
-The platform doesn't stop at theory; it offers practical guidance through a multitude of tutorials and how-to guides. These resources provide hands-on assistance in solving real-world UX design challenges. From mastering the latest prototyping tools to understanding the intricacies of user-centered design, Web UX Collective equips its readers with actionable knowledge that can be applied directly to their projects.<br>In an industry marked by rapid innovation, staying updated with the latest UX trends is essential. Web UX Collective addresses this need by regularly publishing articles on emerging technologies, design methodologies, and industry news. This ensures that its readers are well-informed and prepared to tackle the challenges of designing for the future.<br>
-In conclusion, Web UX Collective is not merely a blog; it's a thriving ecosystem that nurtures the art of user experience. With its wealth of insights, practical guidance, thought-provoking discourse, and commitment to inclusivity, it has become an indispensable resource and a rallying point for UX professionals and enthusiasts worldwide. As the field of UX continues to evolve, Web UX Collective remains a guiding light, illuminating the path toward exceptional user experiences.</p>
+          <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>{{i.topic}}: </b><span class="text-body-secondary">The Art of User Experience</span></h2>
+        <p class="lead"> {{i.write|safe}}</p>
       </div>
       <div class="col-md-5 ">
            <img src="{% static '\image\wdd2.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1450">
@@ -41,20 +33,11 @@ In conclusion, Web UX Collective is not merely a blog; it's a thriving ecosystem
       </div>
     </div>
    <br><hr><br>
+   {% elif i.name == 'Pankaj' %}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>Web Design Ledger: </b><span class="text-body-secondary">Way in Digital Creativity</span></h2>
-        <p class="lead">In the dynamic realm of web design, Web Design Ledger has established itself as an unwavering beacon for designers and developers seeking inspiration and knowledge. Since its inception in 2008, this venerable platform has been a trusted guide through the ever-evolving landscape of digital design.<br>
-
-At its core, Web Design Ledger is a source of boundless inspiration. With its carefully curated showcases, it unveils remarkable web designs, user interfaces, and digital artwork, sparking the imagination of designers and urging them to explore uncharted creative territories.<br>
-
-However, it's not merely a source of visual inspiration. Web Design Ledger is an educational treasure trove. It offers a diverse array of tutorials, guides, articles, and design theory, making it a valuable resource for designers of all levels of expertise. Whether you're a beginner aiming to master the basics of web development or a seasoned pro diving into advanced design concepts, the platform provides a wellspring of knowledge.<br>
-
-In an industry marked by constant innovation, staying informed is paramount. Web Design Ledger fulfills this need by delivering the latest news, trends, and updates in the world of web design. From responsive design principles to emerging technologies and design philosophies, the platform ensures that designers remain well-equipped to navigate the ever-changing landscape.<br>
-
-The platform extends beyond being a mere repository of knowledge; it fosters a sense of community among designers. Through interactive features such as comments and discussions on articles, it encourages engagement, knowledge-sharing, and collaboration among its readers, authors, and fellow designers.<br>
-
-Recognizing the importance of tools in a designer's arsenal, Web Design Ledger often features articles and reviews on essential design tools, helping designers make informed choices about the software and resources they use in their work.<br>In conclusion, Web Design Ledger stands as a pillar in the world of digital creativity. Its role as an inspiration hub, educational powerhouse, news source, and community builder makes it an invaluable resource for designers and creatives. Whether you're seeking design ideas, practical knowledge, or the latest industry updates, Web Design Ledger remains a steadfast guide, helping designers navigate the ever-evolving terrain of web design, and providing a platform for creativity to flourish.</p>
+        <h2 class="featurette-heading fw-normal lh-1"><b>{{i.topic}}: </b><span class="text-body-secondary">Way in Digital Creativity</span></h2>
+        <p class="lead"> {{i.write|safe}}</p>
       </div>
       <div class="col-md-5 ">
            <img src="{% static '\image\wdd3.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1430">
@@ -62,41 +45,22 @@ Recognizing the importance of tools in a designer's arsenal, Web Design Ledger o
 
     </div>
    <br><hr><br>
+   {% elif i.name == 'Sachin' %}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>ruttl blog:</b><span class="text-body-secondary"> Web Design Review Process</span></h2>
-        <p class="lead">In the fast-paced world of web design, the iterative process of design revisions and client feedback is both essential and often challenging. Enter Ruttl, a transformative platform that has emerged as a game-changer in the web design industry by streamlining the design review and feedback process.<br>
-
-At its core, Ruttl offers a collaborative online space where designers can showcase their work and clients can review it seamlessly. The platform bridges the gap between these two key stakeholders, creating an environment that fosters effective communication and accelerates the design iteration cycle.<br>
-
-One of Ruttl's standout features is its visual feedback system. Instead of relying solely on written descriptions or emails, clients can provide feedback directly on the web page using annotations. This approach not only reduces the potential for miscommunication but also speeds up the feedback loop, allowing designers to understand client preferences and make revisions more efficiently.<br>
-
-Ruttl's platform is designed with user-friendliness in mind, making it accessible to clients with varying levels of technical expertise. Clients can easily view the design, pinpoint specific areas for improvement, and leave comments—all without needing to delve into the technical intricacies of web design.<br>
-
-Moreover, Ruttl encourages collaborative decision-making. Designers and clients can engage in real-time discussions within the platform, clarifying doubts and aligning their visions. This collaborative aspect of Ruttl strengthens the partnership between designers and clients, fostering a sense of shared ownership over the project's success.<br>
-
-The platform's version control feature is another game-changer. It allows designers to keep track of design iterations and revert to previous versions if needed. This not only enhances the design process's transparency but also safeguards against unintended changes, providing peace of mind to both designers and clients.<br>
-
-In conclusion, Ruttl has emerged as a transformative force in the world of web design by simplifying and enhancing the design review and feedback process. Its visual feedback system, user-friendliness, collaborative features, version control, and project management capabilities collectively redefine how designers and clients interact and collaborate. Ruttl not only expedites the design iteration cycle but also fosters stronger client-designer relationships. It's a tool that not only streamlines web design projects but also empowers designers to deliver exceptional results efficiently. As the web design industry continues to evolve, Ruttl stands as a shining example of innovation that addresses a longstanding challenge with elegance and effectiveness.</p>
+        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>{{i.topic}}:</b><span class="text-body-secondary"> Web Design Review Process</span></h2>
+        <p class="lead"> {{i.write|safe}}</p>
       </div>
       <div class="col-md-5 ">
         <img src="{% static '\image\wdd4.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1560">
       </div>
     </div>
 <br><hr><br>
+{% elif i.name == 'Mamta' %}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>Design Shack :</b><span class="text-body-secondary"> A Beacon of Creative Inspiration</span></h2>
-        <p class="lead">In the dynamic world of design, finding a source of consistent inspiration and knowledge is invaluable. Design Shack, founded in 2003 by Joshua Johnson, has emerged as a beacon for designers, developers, and creative minds alike. It serves as a digital sanctuary where the realms of creativity and innovation converge.<br>
-
-At its core, Design Shack is a reservoir of creative inspiration. The platform is a gallery of exceptional design work across various mediums, encompassing web design, graphic design, and user interface design. It offers designers a constant source of fresh ideas, innovative design trends, and creative solutions, igniting the spark of imagination that drives their creative journeys.<br>
-
-Beyond being a source of inspiration, Design Shack is a treasure trove of knowledge. It provides a diverse range of tutorials, guides, and articles, catering to designers at every skill level. Whether you're a novice aiming to grasp the fundamentals or a seasoned professional looking to explore advanced techniques, Design Shack offers comprehensive resources to enhance your skills and deepen your understanding of design.<br>
-
-In the ever-evolving design landscape, staying abreast of the latest trends and technologies is paramount. Design Shack plays the role of a trusted guide by regularly publishing articles on emerging design trends, tools, and industry news. It acts as a compass, navigating designers through the shifting currents of design evolution.<br>
-
-Design Shack is not just a platform; it's a community. It fosters a sense of togetherness among designers and creatives. Through comments and discussions on articles, readers can engage with authors and fellow enthusiasts, creating a vibrant ecosystem of knowledge-sharing and collaboration. This sense of camaraderie adds depth to the platform, making it more than just a resource—it's a community where creative minds converge.<br>
-        In conclusion, Design Shack stands as a lighthouse for designers and creatives, illuminating their creative journeys with inspiration, education, and community. Whether you're seeking design inspiration, practical knowledge, or a sense of belonging within the design community, Design Shack consistently delivers. As the design landscape continues to evolve, Design Shack remains a steadfast companion, helping designers navigate the ever-changing terrain of creativity and innovation.</p>
+        <h2 class="featurette-heading fw-normal lh-1"><b> {{i.topic}}:</b><span class="text-body-secondary"> A Beacon of Creative Inspiration</span></h2>
+        <p class="lead">{{i.write|safe}}</p>
       </div>
       <div class="col-md-5 ">
          <img src="{% static '\image\wdd5.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1380">
@@ -105,4 +69,6 @@ Design Shack is not just a platform; it's a community. It fosters a sense of tog
 
  </div>
   <br><hr>
+  {%endif%}
+  {%endfor%}
 {%endblock body%}

@@ -7,19 +7,13 @@ h1 { text-align:center;}
 {% load static %}
 <div class="container ">
      <h1><b>Top 5 BlockChain blogs in the world</b></h1><br><br>
-
+  {%for i in blog%}
+  {% if i.name == 'Shivansh'%}
   <div class="row featurette d-flex justify-content-center align-items-center ">
 
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>CoinSutra :</b> <span class="text-body-secondary">Trusted Companion in the World of Blockchain and Cryptocurrency</span></h2>
-        <p class="lead">In the midst of the digital revolution, blockchain technology and cryptocurrencies have emerged as transformative forces, reshaping the way we think about finance and technology. Navigating this complex and ever-evolving landscape can be daunting, but Coinsutra stands as a reliable and comprehensive resource, guiding individuals through the intricate world of blockchain and cryptocurrency.<br>
-Founded by Harsh Agrawal, Coinsutra transcends the traditional definition of a blog, offering a wealth of knowledge, insights, and practical guidance. With a commitment to education and empowerment, Coinsutra has become the go-to platform for anyone seeking to understand, invest in, or engage with blockchain technology and cryptocurrencies.<br>
-
-
-Security is a paramount concern in the cryptocurrency space, and Coinsutra places a strong emphasis on educating its readers about safe practices. The platform offers guidance on selecting secure wallets, evaluating cryptocurrency exchanges, and implementing robust security measures to safeguard digital assets. This commitment ensures that readers can engage confidently in the digital financial ecosystem.<br>
-In an industry characterized by rapid innovation and regulatory changes, staying informed is crucial. Coinsutra rises to the challenge by delivering up-to-the-minute news, analyses, and market insights. Whether it's a groundbreaking development in the cryptocurrency market or a transformative shift in blockchain technology, Coinsutra ensures that its readers are well-prepared to navigate this dynamic landscape.<br>
-Coinsutra is more than just an educational resource; it fosters a sense of community among its readers. Through interactive features such as comments and discussions, readers can engage with authors and fellow enthusiasts, creating a vibrant ecosystem of knowledge-sharing and collaboration. This sense of community adds depth to the platform, making it a hub for lively discussions and the exchange of valuable information.<br>
-        In conclusion, Coinsutra is an invaluable companion for individuals venturing into the intricate world of blockchain and cryptocurrency. With its dedication to education, security, community engagement, and inclusivity, it empowers individuals to confidently explore and participate in the digital financial revolution. As blockchain and cryptocurrencies continue to redefine the future of finance, Coinsutra remains a trusted guide, illuminating the path for those eager to embark on their journey through this transformative realm.</p>
+        <h2 class="featurette-heading fw-normal lh-1"><b>{{i.topic}}:</b> <span class="text-body-secondary">Coin Knowledge Network</span></h2>
+        <p class="lead">{{i.write}}</p>
       </div>
       <div class="col-md-5 ">
           <img src="{% static '\image\bb1.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1500">
@@ -27,13 +21,11 @@ Coinsutra is more than just an educational resource; it fosters a sense of commu
       </div>
     </div>
    <br><hr><br>
+   {% elif i.name == 'Suraj'%}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>BitMEX Research: </b><span class="text-body-secondary">A Beacon of Crypto Insights</span></h2>
-        <p class="lead">In the ever-evolving landscape of cryptocurrencies and blockchain technology, staying informed and navigating the complex intricacies of this digital realm can be a daunting task. BitMEX Research, an integral arm of the renowned BitMEX crypto exchange, stands out as a trusted source of valuable insights, analysis, and research reports that shed light on the intricacies of this transformative industry.<br>
-        BitMEX Research is not just another crypto blog; it's an indispensable resource within the cryptocurrency ecosystem. As an extension of BitMEX, a leading cryptocurrency exchange known for its commitment to innovation and security, BitMEX Research benefits from the expertise and resources of the larger BitMEX group, making it a reliable source of in-depth analysis and research.<br>One of BitMEX Research's primary objectives is to demystify the complexities of cryptocurrencies and blockchain technology. Through comprehensive research reports and insightful articles, the platform offers valuable explanations and analyses of various crypto-related topics, ranging from blockchain scalability and consensus mechanisms to market dynamics and security considerations. This wealth of information is invaluable to both crypto enthusiasts and industry professionals looking to deepen their understanding of the field.<br>
-        BitMEX Research doesn't stop at explanations; it also delves into market analysis. The platform keeps a vigilant eye on market trends, providing regular updates and reports on cryptocurrency price movements, trading volumes, and market sentiment. This real-time analysis helps traders and investors make informed decisions in the volatile cryptocurrency market.<br>
-        What sets BitMEX Research apart is its commitment to cutting-edge research. The platform actively engages in original research projects, exploring innovative concepts and emerging technologies within the crypto space. This dedication to advancing the field contributes to the broader crypto community's understanding of the industry's potential and limitations.<br>In conclusion, BitMEX Research is a beacon of insights and knowledge in the world of cryptocurrencies. Its affiliation with BitMEX, commitment to in-depth analysis, and dedication to objectivity make it a trusted resource for those seeking to navigate the complexities of this digital frontier. As the cryptocurrency and blockchain space continues to evolve, BitMEX Research remains a reliable guide, illuminating the path for those eager to explore and understand this transformative industry.</p>
+        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>{{i.topic}}: </b><span class="text-body-secondary">A Beacon of Crypto Insights</span></h2>
+        <p class="lead">{{i.write}}</p>
       </div>
       <div class="col-md-5 ">
            <img src="{% static '\image\bb2.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1540">
@@ -41,15 +33,11 @@ Coinsutra is more than just an educational resource; it fosters a sense of commu
       </div>
     </div>
    <br><hr><br>
+   {% elif i.name == 'Aryan'%}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>Cointelegraph:</b> <span class="text-body-secondary"> Illuminating the Cryptocurrency and Blockchain Space</span></h2>
-        <p class="lead">In the dynamic world of cryptocurrency and blockchain technology, where innovation and change occur at an astonishing pace, staying informed and connected is paramount. Cointelegraph, a prominent and respected platform, has emerged as a beacon of knowledge, insight, and community for enthusiasts, investors, and industry professionals alike.<br>
-        Cointelegraph, often referred to simply as "CT," stands as a testament to the power of crypto journalism. Since its inception in 2013, it has evolved into one of the most respected and widely recognized sources of news and analysis in the cryptocurrency and blockchain space. With a team of experienced journalists and experts, Cointelegraph is committed to delivering accurate, timely, and unbiased information to its global audience.<br>
-        Cointelegraph goes beyond news reporting; it serves as an educational resource. The platform offers a wealth of educational content, including guides, tutorials, and explainers, designed to demystify complex concepts in the world of cryptocurrencies and blockchain. Whether you're a newcomer seeking to understand the basics or an industry professional looking for in-depth analysis, Cointelegraph has something to offer.
-        <br>Cointelegraph's global reach is a testament to the universality of cryptocurrencies and blockchain. The platform delivers content in multiple languages, ensuring that individuals from diverse backgrounds can access reliable information about this transformative industry. This commitment to inclusivity reflects Cointelegraph's dedication to providing a global perspective on crypto and blockchain.
-
-In conclusion, Cointelegraph is not just a news website; it's a trusted companion in the cryptocurrency and blockchain journey. Its commitment to accurate reporting, comprehensive coverage, education, community engagement, and global inclusivity makes it an indispensable resource for anyone seeking to navigate the ever-evolving landscape of cryptocurrencies and blockchain technology. As the crypto space continues to mature and innovate, Cointelegraph remains a steadfast guide, illuminating the path for those eager to explore and understand this transformative industry.</p>
+        <h2 class="featurette-heading fw-normal lh-1"><b>{{i.topic}}:</b> <span class="text-body-secondary"> Illuminating the Cryptocurrency and Blockchain Space</span></h2>
+        <p class="lead">{{i.write}}</p>
       </div>
       <div class="col-md-5 ">
            <img src="{% static '\image\bb3.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1360">
@@ -57,33 +45,22 @@ In conclusion, Cointelegraph is not just a news website; it's a trusted companio
 
     </div>
    <br><hr><br>
+   {% elif i.name == 'Alim'%}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>TokenMinds:</b><span class="text-body-secondary">Navigating the Cryptocurrency and Blockchain Marketing Frontier</span></h2>
-        <p class="lead">In the fast-evolving world of cryptocurrencies and blockchain technology, success often hinges on effective marketing and strategic communication. TokenMinds, a dynamic marketing agency specializing in the crypto and blockchain space, has emerged as a trusted partner for projects seeking to navigate the complexities of this innovative industry.
-        <br>TokenMinds is more than just a marketing agency; it's a strategic ally for crypto and blockchain projects of all sizes. Founded on the principles of expertise, innovation, and results-driven strategies, TokenMinds offers a comprehensive suite of services tailored to the unique challenges and opportunities within the crypto and blockchain sector.<br>
-        TokenMinds is more than just a marketing agency; it's a strategic ally for crypto and blockchain projects of all sizes. Founded on the principles of expertise, innovation, and results-driven strategies, TokenMinds offers a comprehensive suite of services tailored to the unique challenges and opportunities within the crypto and blockchain sector.<br>
-        TokenMinds understands that successful crypto and blockchain projects require holistic marketing approaches. The agency offers a wide range of services, including branding, community management, content marketing, public relations, and influencer outreach. This comprehensive approach ensures that clients can establish a strong presence, build trust, and engage with their target audiences effectively.<br>
-            In an industry characterized by innovation, TokenMinds embraces creativity and adaptability. The agency is continually exploring new marketing channels, emerging technologies, and innovative strategies to help clients stand out in a crowded market. This commitment to innovation ensures that clients stay at the forefront of industry trends.<br>
-        The crypto and blockchain industry knows no borders, and neither does TokenMinds. The agency's global reach allows it to serve clients from diverse regions, ensuring that marketing strategies are tailored to local markets while maintaining a global perspective.<br>
-
-In conclusion, TokenMinds is a trailblazing marketing agency that understands the unique challenges and opportunities within the crypto and blockchain industry. Its expertise, comprehensive solutions, commitment to compliance, proven track record, innovative approach, and global reach make it an indispensable partner for crypto and blockchain projects looking to thrive in this dynamic landscape. As the industry continues to evolve, TokenMinds remains a trusted guide, helping projects navigate the marketing frontier and achieve their goals in the world of cryptocurrencies and blockchain technology.</p>
+        <h2 class="featurette-heading fw-normal lh-1 pl-0"><b>{{i.topic}}:</b><span class="text-body-secondary">Navigating the Cryptocurrency and Blockchain Marketing Frontier</span></h2>
+        <p class="lead">{{i.write}}</p>
       </div>
       <div class="col-md-5 ">
         <img src="{% static '\image\bb4.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1570">
       </div>
     </div>
 <br><hr><br>
+{% elif i.name == 'Paritosh'%}
    <div class="row featurette d-flex justify-content-center align-items-center ">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1"><b>CoinDesk:</b><span class="text-body-secondary">Gateway to Cryptocurrency and Blockchain Insights</span></h2>
-        <p class="lead">In the rapidly evolving world of cryptocurrencies and blockchain technology, access to reliable information and analysis is essential. CoinDesk, a leading digital media platform, has established itself as the go-to source for news, analysis, and insights in the crypto and blockchain space. Let's dive into what makes CoinDesk an invaluable resource for enthusiasts, investors, and industry professionals alike.<br>
-        Since its inception in 2013, CoinDesk has been at the forefront of crypto journalism, providing readers with a comprehensive and trustworthy source of news and information. With a team of seasoned journalists and industry experts, the platform delivers breaking news, in-depth analysis, and thought-provoking features, ensuring that readers are well-informed about the latest developments in the crypto world.<br>
-
-        CoinDesk goes beyond news reporting; it serves as an educational hub. The platform offers a wide range of resources, including guides, tutorials, and explainers, designed to demystify complex concepts in the world of cryptocurrencies and blockchain. Whether you're a newcomer seeking to understand the basics or an industry professional looking for in-depth insights, CoinDesk has something to offer.<br>The cryptocurrency and blockchain space is inherently global, and CoinDesk embraces this international perspective. The platform provides content and analysis that cater to a global audience, recognizing the diverse backgrounds and interests of its readers. This inclusivity is a testament to CoinDesk's commitment to providing a holistic view of the crypto and blockchain industry.<br>
-        CoinDesk's influence extends beyond its digital platform. The organization hosts events and conferences that bring together thought leaders, innovators, and industry professionals from around the world. These events provide a platform for networking, learning, and discussing the future of crypto and blockchain.
-
-In conclusion, CoinDesk is not just a news website; it's a trusted companion on the journey through the cryptocurrency and blockchain landscape. Its commitment to accurate reporting, comprehensive coverage, education, global perspective, community engagement, and industry events makes it an indispensable resource for anyone seeking to navigate this rapidly evolving industry. As cryptocurrencies and blockchain technology continue to redefine the financial and technological landscape, CoinDesk remains a reliable guide, illuminating the path for those eager to explore and understand this transformative world.</p>
+        <h2 class="featurette-heading fw-normal lh-1"><b>{{i.topic}}:</b><span class="text-body-secondary">Gateway to Cryptocurrency and Blockchain Insights</span></h2>
+        <p class="lead">{{i.write}}</p>
       </div>
       <div class="col-md-5 ">
          <img src="{% static '\image\bb5.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="1550">
@@ -92,4 +69,6 @@ In conclusion, CoinDesk is not just a news website; it's a trusted companion on 
 
  </div>
   <br><hr>
+  {%endif%}
+  {%endfor%}
 {%endblock body%}
