@@ -1,5 +1,5 @@
 from django.shortcuts import HttpResponse,render,redirect
-from Blogging.models import Blog,signupdata,WriteBlockchainBlog,WriteTechnologyBlog,WriteRoboticsBlog,WriteWebBlog
+from Blogging.models import Blog,signupdata,WriteBlockchainBlog,WriteTechnologyBlog,WriteRoboticsBlog,WriteWebBlog ,BlogByUser
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
@@ -119,3 +119,27 @@ def logoutpage(request):
     logout(request)
     messages.success(request,'Logout Successfully')
     return redirect('blog')
+
+
+def writeablog(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+             
+            category = request.POST.get('select')
+            topic = request.POST.get('topic')
+            blog = request.POST.get('writeablog')
+            
+            a = BlogByUser(name = name , email = email , category = category , topic = topic , blog = blog)
+            a.save()
+            messages.success(request, "We will review your blog, and if we think it's good, we will post it on our website." )
+            return redirect('writeablog')
+
+            
+        return render(request,'writeablog.html')
+    else:
+        
+        messages.error(request,'Login to Write a Blog ')
+        return render(request,'index.html')
+    

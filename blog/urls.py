@@ -30,5 +30,6 @@ urlpatterns = [
     path('loginpage', views.loginpage,name='loginpage'),
     path('authenticationpage', views.authenticationpage ,name='authenticationpage'),
     path('logout', views.logoutpage,name='logout'),
+    path('writeablog', views.writeablog,name='writeablog'),
 
 ]
