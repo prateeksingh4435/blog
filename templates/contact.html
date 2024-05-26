@@ -72,15 +72,30 @@
         Select your Query:
         <select class="form-select" aria-label="Default select example" name="select">
   <option selected>Technology</option>
-  <option value="">Web Designing</option>
-  <option value="2">Block Chain</option>
-  <option value="3">Robotics</option>
+  <option value="Web Designing">Web Designing</option>
+  <option value="Block Chain">Block Chain</option>
+  <option value="Robotics">Robotics</option>
 </select>
         <div class="mb-3">
 <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Elaborate your concern</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textarea" required></textarea>
 </div>
+{% if messages%}
+{% for i in  messages%}
+{% if i.tags == 'success' %}
+<p class="alert alert-info"> {{i}} </p>
+
+{%else%}
+<p class="alert alert-danger"> {{i}} </p>
+
+{%endif%}
+{%endfor%}
+{%endif%}
+
+
+
+
   <div class="col-12">
     <button class="btn btn-primary" type="submit">Submit form</button>
   </div>

@@ -22,6 +22,7 @@ def contact(request):
         select = request.POST.get('select')
         desc = request.POST.get('textarea')
         alldata = Blog(firstname = firstname , lastname =lastname,email=email,member=member,query=select,concern=desc)
+        messages.success(request,'We will review it and get bact to you soon ')
         alldata.save()
 
 
@@ -142,4 +143,3 @@ def writeablog(request):
         
         messages.error(request,'Login to Write a Blog ')
         return render(request,'index.html')
-    
