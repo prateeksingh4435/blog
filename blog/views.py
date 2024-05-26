@@ -89,6 +89,7 @@ def signup(request):
 
             my_user.save()
             messages.success(request, 'Sign-up successful')
+            return redirect('loginpage')
         else:
             messages.error(request,'Password and Confirm Password Not Match')
 
